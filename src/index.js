@@ -1,4 +1,4 @@
-import overunder from '../../overunder/'
+import overunder from 'overunder'
 
 let resizer1 = overunder.resize(700, document.getElementById('resizer1'))
 let resizer2 = overunder.resize(500, document.getElementById('resizer2'))
