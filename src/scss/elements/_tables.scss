@@ -1,0 +1,47 @@
+// TABLES
+table,
+.table {
+  @extend .p;
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: table;
+	width: 100%;
+}
+.table--fixed {
+  table-layout: fixed;
+}
+.table__row-header {
+	display: table-header-group;
+}
+.table__row-footer {
+	display: table-footer-group;
+}
+.table__row-group {
+	display: table-row-group;
+}
+.table__row {
+	display: table-row;
+}
+.table__cell {
+	display: table-cell;
+}
+// For use with actual tables
+td,
+th {
+	@extend .table__cell;
+	border-bottom: 1px solid #f5f5f5;
+	padding: .66em 1.33em;
+
+	.no-padding & {
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+th {
+  font-weight: 100;
+  text-align: left;
+}

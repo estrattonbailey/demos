@@ -1,0 +1,78 @@
+// Base Styles
+@import "base/normalize";
+@import "base/breakpoints";
+@import "base/display";
+@import "base/widths";
+@import "base/containers";
+@import "base/clears";
+@import "base/utilities";
+@import "base/colors";
+@import "base/align";
+@import "base/floats";
+@import "base/spacing";
+@import "base/z-index";
+
+// Elements
+@import "elements/_init";
+
+// Components
+@import "components/_init";
+
+// Modules
+// @import "modules/hero";
+
+#resizer1 {
+  &::after {
+    @extend .h2;
+    content:'UNDER 700px';
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 0; left: 0; right: 0; top: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  &.is-over {
+    background-color: $c1;
+    &::after {
+      content:'OVER 700px';
+      color: white;
+    }
+  }
+}
+
+#resizer2 {
+  &::after {
+    @extend .h2;
+    content:'UNDER 500px';
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 0; left: 0; right: 0; top: 0;
+    margin: auto;
+    color: $cb;
+    text-align: center;
+  }
+
+  &.is-over {
+    background-color: $cb;
+    &::after {
+      content:'OVER 500px';
+      color: white;
+    }
+  }
+}
+
+.resizer,
+.scroller {
+  bottom: 0;
+}
+.scroller {
+  left: 0;
+}
+.resizer {
+  right: 0;
+}
