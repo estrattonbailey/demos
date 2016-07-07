@@ -55,6 +55,6 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "overunder": "0.0.4"
+    "overunder": "0.0.5"
   }
 }
